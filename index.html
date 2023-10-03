@@ -4,18 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=q" />
     <title>Judul</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="homePage">
-      <h2>TItle</h2>
+      <h1 id="title">Coba</h1>
       <p>Paragraph</p>
       <div class="hero"></div>
     </div>
 
-    <div class="about">
-      <div class="hero"></div>
+    <div class="about" id="about">
+      <div class="hero">INi hero section</div>
     </div>
 
-    <script src="script.js"></script>
+    <form action="">
+      <input type="text" id="name" /><input type="text" id="email" /><input
+        type="text"
+        id="city"
+      /><input type="number" id="zipCode" /><input
+        type="checkbox"
+        id="checkbox"
+      />
+    </form>
+
+    <button id="button" onclick="showAlert()">Kirim</button>
+
+    <script defer src="js-lanjutan-26092023.js"></script>
+    <!-- <script src="js-lanjutan.js"></script> -->
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>

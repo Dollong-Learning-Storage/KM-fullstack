@@ -1,13 +1,55 @@
 // let, var
+
 const nama = "doltons";
 const umurDariNama = 20; // number
 const boxBuah = ["mangga", "anggur", "apel", "jeruk", "pisang"]; // array
-const sepuh = {
+const listMovie = ["Marvel", "Minion"];
+const marvelMovie = {
+  name: "Marvel",
+};
+
+// hitungan biasa - 1
+const listSepuh = [
+  "Yusuf",
+  "Dika",
+  "Afif",
+  "Ilham",
+  "Ahmad",
+  [
+    [20, 29],
+    [21, 30],
+  ],
+  [
+    {
+      nama: "Ilham",
+      umur: 20,
+      isMarried: false,
+      favFood: "bakso",
+      listFavMovie: [],
+    },
+    {
+      nama: "Yusuf",
+      umur: 20,
+      isMarried: false,
+      favFood: "bakso",
+      listFavMovie: [],
+    },
+  ],
+  ["Apel", "Mangga"],
+];
+
+console.log(listSepuh[6][1].nama); // Yusuf
+
+const sepuhIlham = {
   nama: "Ilham",
   umur: 20,
   isMarried: false,
   favFood: "bakso",
+  listFavMovie: [],
 };
+
+// console.log(listSepuh[4]);
+// console.log(sepuhIlham.favFood);
 
 // init, condition, action
 // for (let i = 0; i < 4; i++) {
@@ -15,9 +57,9 @@ const sepuh = {
 // }
 
 // for in
-for (const buah of boxBuah) {
-  console.log(buah);
-}
+// for (const buah of boxBuah) {
+//   console.log(buah);
+// }
 
 // for of
 // for (const item in sepuh) {
