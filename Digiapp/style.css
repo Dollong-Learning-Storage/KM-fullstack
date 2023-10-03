@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+main {
+  min-height: 100vh;
+}
+
+header {
+  justify-content: space-between;
+}
+
+header > nav > ul,
+header {
+  display: flex;
+  align-items: center;
+}
+
+header > nav > ul {
+  list-style: none;
+}
+
+header > nav > ul li {
+  margin-right: 12px;
+}
+
+header,
+footer {
+  padding: 12px 20px;
+  background-color: lightblue;
+}
+
+main {
+  padding: 20px;
+}
+
+main > button#click-btn {
+  padding: 4px 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: antiquewhite;
+  background-color: brown;
+}
+
+main > ul > li {
+  /* width: 300px; */
+  list-style-type: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.list-content {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  /* grid-column-start: 2; */
+}
+
+#item-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.list-content p {
+  padding: 8px 12px;
+  background-color: lightblue;
+}
