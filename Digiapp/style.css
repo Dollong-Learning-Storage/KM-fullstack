@@ -1,10 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
+/* *   1280-1024   - desktop (default grid)
+*   1024-768    - tablet landscape
+*   768-480     - tablet 
+*   480-less    - phone landscape & smaller */
+
+:root {
+  --desktop-breakpoint: 1900px;
+  --tablet-breakpoint: 1200px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* --md-3 {
+  font-size: ;
+  fontwe
+} */
 
 html {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -18,17 +33,41 @@ header {
   justify-content: space-between;
 }
 
-header > nav > ul,
+.nav-wrapper > nav {
+  display: flex;
+  margin-left: 32px;
+}
+
+.nav-wrapper > nav > ul,
 header {
   display: flex;
   align-items: center;
 }
 
-header > nav > ul {
+.nav-wrapper > nav > ul {
   list-style: none;
 }
 
-header > nav > ul li {
+.nav-wrapper > nav > ul li {
+  margin-right: 12px;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   margin-right: 12px;
 }
 
@@ -62,8 +101,9 @@ main > ul > li {
 }
 
 .list-content {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   gap: 10px;
   /* grid-column-start: 2; */
 }
@@ -73,7 +113,14 @@ main > ul > li {
   grid-column-end: 4;
 }
 
+.list-content li {
+  max-width: 300px;
+}
+
 .list-content p {
   padding: 8px 12px;
   background-color: lightblue;
+}
+
+@media screen and (max-width: 768px) {
 }
