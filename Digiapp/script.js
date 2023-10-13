@@ -62,3 +62,16 @@ DIGIMON_DATA.map((item) => {
 // });
 
 document.querySelector("#click-btn").textContent = "Click Button";
+
+const users = localStorage.getItem("usr");
+
+const userData = users && JSON.parse(users);
+
+document.querySelector(".profile p").innerHTML = userData
+  ? userData.name
+  : "Guest";
+
+const handleLogout = () => {
+  localStorage.removeItem("usr");
+  document.querySelector(".profile p").innerHTML = "Guest";
+};

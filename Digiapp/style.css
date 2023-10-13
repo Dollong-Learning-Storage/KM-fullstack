@@ -102,6 +102,7 @@ main > ul > li {
 
 .list-content {
   display: flex;
+  overflow-x: auto;
   /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   gap: 10px;
@@ -114,7 +115,7 @@ main > ul > li {
 }
 
 .list-content li {
-  max-width: 300px;
+  width: 300px;
 }
 
 .list-content p {
