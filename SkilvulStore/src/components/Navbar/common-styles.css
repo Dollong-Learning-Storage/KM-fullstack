@@ -1,0 +1,14 @@
+header {
+  align-items: center;
+  justify-content: space-between;
+  background: gray;
+}
+
+header {
+  display: flex;
+}
+
+ul > li {
+  margin-left: 12px;
+  list-style: none;
+}

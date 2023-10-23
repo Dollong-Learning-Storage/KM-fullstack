@@ -4,8 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <div class="nav-wrapper">
+        <h1>Logo</h1>
+        <nav>
+          <ul id="route">
+            <li>Home</li>
+            <li>Profile</li>
+          </ul>
+          <ul id="socmed">
+            <li>Facebook</li>
+            <li>Whatsapp</li>
+          </ul>
+          <ul>
+            <li>
+              <button onclick="handleLogout()">Logout</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="profile">
+        <img
+          src="https://www.digi-api.com/images/digimon/w/Garummon.png"
+          alt=""
+        />
+        <p>Guest</p>
+      </div>
+    </header>
     <h1>Login</h1>
     <form id="form" action="javascript:void(0)">
       <input type="email" name="email" id="email" />
