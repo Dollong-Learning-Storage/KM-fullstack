@@ -1,13 +1,6 @@
-const Button = () => {
-  const showAlert = () => {
-    alert("Halo dunia");
-    console.log("halo");
-  };
-  return (
-    <>
-      <button onClick={showAlert}>alert</button>
-    </>
-  );
-};
+/* eslint-disable react/prop-types */
+const Button = ({ onClick, children }) => (
+  <button onClick={onClick}>{children}</button>
+);
 
 export default Button;
