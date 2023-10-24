@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../../components/button";
 import styles from "./styles.module.css";
 
-const Card = ({ title, image, price, onAddToCart }) => {
+const Card = ({ title, image, price, totalCart, onAddToCart }) => {
   return (
     <div className={styles.cardContainer}>
       <img width={100} src={image} alt={title} />

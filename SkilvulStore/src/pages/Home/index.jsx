@@ -1,10 +1,7 @@
 import useFetcher from "../../hooks/useFetcher";
 import Card from "../../components/Card";
-import { useState } from "react";
 
-const Home = () => {
-  const [totalCart, setTotalCart] = useState(0);
-
+const Home = ({ totalCart, onAddToCart }) => {
   const { data, isLoading } = useFetcher({});
 
   if (isLoading) return <p>Loading...</p>;
@@ -22,7 +19,7 @@ const Home = () => {
             image={item.image}
             title={item.title}
             price={item.price}
-            onAddToCart={() => setTotalCart(totalCart + 1)}
+            onAddToCart={onAddToCart}
           />
         );
       })}
