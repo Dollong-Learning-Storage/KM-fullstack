@@ -18,6 +18,7 @@ const useFetcher = ({ path = "", defaultState = [] }) => {
   return {
     data,
     isLoading,
+    // hasNoData: !data.length
   };
 };
 

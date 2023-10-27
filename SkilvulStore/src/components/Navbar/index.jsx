@@ -3,8 +3,7 @@ import "./common-styles.css";
 import styles from "./styles.module.css";
 
 const Navbar = () => {
-  const carts = useSelector((store) => store.cart);
-  console.log(carts, "carts");
+  // const carts = useSelector((store) => store.cart);
 
   return (
     <>

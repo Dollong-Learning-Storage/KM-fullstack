@@ -1,14 +1,20 @@
-import React from "react";
 import Button from "../button";
 import styles from "./styles.module.css";
 
 const Card = ({ title, image, price, onClick, onAddToCart }) => (
-  <button className={styles.cardContainer} onClick={onClick}>
+  <div className={styles.cardContainer} onClick={onClick}>
     <img width={100} src={image} alt={title} />
-    <p className="title">{title}</p>
+    <p className={styles.titleText}>{title}</p>
     <p className="price">{price}</p>
-    <Button onClick={onAddToCart}>Add To Cart</Button>
-  </button>
+    <Button
+      onClick={(e) => {
+        e.stopPropagation();
+        onAddToCart();
+      }}
+    >
+      Add To Cart
+    </Button>
+  </div>
 );
 
 export default Card;

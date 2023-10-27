@@ -18,6 +18,7 @@ export const cartSlice = createSlice({
   initialState: [{ id: 1, image: "", title: "Tess", price: "1000" }],
   reducers: {
     addToCart: (state, action) => {
+      console.log("addToCart");
       state.push({
         id: Date.now(),
         image: action.payload.image,

@@ -19,6 +19,7 @@ export const detailSlice = createSlice({
   },
   reducers: {
     addDetail: (state, action) => {
+      console.log("adddetail");
       state.id = Date.now();
       state.title = action.payload.title;
       state.price = action.payload.price;
