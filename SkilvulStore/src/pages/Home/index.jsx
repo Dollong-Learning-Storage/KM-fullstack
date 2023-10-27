@@ -1,9 +1,12 @@
 import useFetcher from "../../hooks/useFetcher";
 import Card from "../../components/Card";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
+import { addDetail } from "../../redux/detailSlice";
 
 const Home = () => {
-  const [totalCart, setTotalCart] = useState(0);
+  const dispatch = useDispatch();
+  const carts = useSelector((state) => state.cart);
 
   const { data, isLoading } = useFetcher({});
 
@@ -12,7 +15,7 @@ const Home = () => {
   return (
     <main>
       <p>Halo dunia</p>
-      <p>Total isi cartmu: {totalCart}</p>
+      <p>Total isi cartmu: {carts?.length}</p>
       <br />
       <br />
       {data.map((item, index) => {
@@ -22,7 +25,24 @@ const Home = () => {
             image={item.image}
             title={item.title}
             price={item.price}
-            onAddToCart={() => setTotalCart(totalCart + 1)}
+            onClick={() =>
+              dispatch(
+                addDetail({
+                  title: item.title,
+                  image: item.image,
+                  price: item.price,
+                })
+              )
+            }
+            onAddToCart={() =>
+              dispatch(
+                addToCart({
+                  title: item.title,
+                  image: item.image,
+                  price: item.price,
+                })
+              )
+            }
           />
         );
       })}
