@@ -1,4 +1,5 @@
 const express = require("express");
+const router = require("./routes");
 const app = express();
 const port = 3000;
 
@@ -13,6 +14,8 @@ app.get("/", (req, res) => {
     name: "Hello World",
   });
 });
+
+app.use("/", router);
 
 app.post("/register", async (req, res) => {
   const userInput = req.body;
